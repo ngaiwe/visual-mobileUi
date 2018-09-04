@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Button} from 'antd';
 import '@/css/reset.css'
-import '@/App.less'
+import './App.less'
 
 class App extends Component {
   render() {

@@ -1,13 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
-import App from '@/App';
-import Route from '@/components/Home.jsx'
-import registerServiceWorker from '@/registerServiceWorker';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux'
 
-ReactDOM.render((<BrowserRouter>
-    <App>
-        <Route/>
-    </App>
-</BrowserRouter>), document.getElementById('root'));
+import configureStore from './store/configureStore.js'
+import RouteMap from '@/router/routeMap'
+import registerServiceWorker from '@/registerServiceWorker'
+
+const store = configureStore()
+
+render(
+    <Provider store={store}>
+        <RouteMap/>
+    </Provider>, 
+document.getElementById('root'))
+
 registerServiceWorker();
