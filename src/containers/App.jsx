@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import {Button} from 'antd';
+import { Route } from 'react-router-dom'
+
+import Header from '@/components/header/Header'
+import Footer from '@/components/footer/Footer'
+
+// import {Button} from 'antd';
 import '@/css/reset.css'
-import './App.less'
+import './app.less'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="text">123</div>
-        <Button type="primary">Button</Button>
+        <Route exact path='/' component={Header}/>
         {this.props.children}
+        <Route exact path='/' component={Footer}/>
       </div>
     )
   }
