@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import App from '@/containers/App'
-// import Home from '@/components/Home'
+import Home from '@/containers/Home/Home'
 
 class RouteMap extends React.Component {
     render () {
@@ -10,7 +10,7 @@ class RouteMap extends React.Component {
             <Router>
                 <App>
                     <Switch>
-                        
+                        <Route path="/" component={Home}/>
                     </Switch>
                 </App>
             </Router>
