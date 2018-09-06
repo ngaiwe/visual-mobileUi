@@ -1,13 +1,18 @@
 import React, {Component} from 'react'
-import { Layout, Menu, Icon } from 'antd'
-const { SubMenu } = Menu
+import { Route } from 'react-router-dom'
+import { Layout } from 'antd'
+
+import './moduleContainer.less'
+
+import SizeSet from '@/containers/SizeSet/SizeSet'
+
 const { Sider } = Layout
 
 class ModuleContainer extends Component {
     render () {
         return (
-            <Sider width={500} style={{ background: '#fff' }}>
-              
+            <Sider className="moduleContainer" width={500}>
+                <Route exact path="/modules/sizeSet" component={SizeSet}/>
             </Sider>
         )
     }

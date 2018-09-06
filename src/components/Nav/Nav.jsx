@@ -10,8 +10,8 @@ class Nav extends Component {
             <Sider className="silderType" width={200} style={{ background: '#fff' }}>
               <Menu
                 mode="inline"
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['base']}
+                defaultSelectedKeys={['']}
+                defaultOpenKeys={['']}
                 style={{ height: '100%', borderRight: 0 }}
               >
                 <SubMenu key="base" title={<span><Icon type="form" theme="outlined" />基础设置</span>}>
